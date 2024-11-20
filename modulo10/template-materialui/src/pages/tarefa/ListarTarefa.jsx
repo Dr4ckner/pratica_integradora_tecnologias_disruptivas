@@ -125,8 +125,21 @@ const ListarTarefa = () => {
                         <Button variant="contained" color="success" onClick={() => handleEditar(row.idTarefa)}><EditIcon fontSize="small" /></Button>            
                       </TableCell>
                       <TableCell align="center">
-                        <Button variant="contained" color="error" onClick={() => handleDeletar(row.idTarefa)}><DeleteIcon fontSize="small" /></Button>            
-                      </TableCell>
+                        <Button 
+                            variant="contained" 
+                            color="error" 
+                            onClick={() => handleDeletar(row.idTarefa)}
+                            sx={{
+                                '&:hover': {
+                                    backgroundColor: '#8B0000',
+                                    color: 'white',
+                                },
+                            }}
+                        >
+                            <DeleteIcon fontSize="small" />
+                        </Button>            
+                    </TableCell>
+
                     </TableRow>
                 ))}
                 </TableBody>
